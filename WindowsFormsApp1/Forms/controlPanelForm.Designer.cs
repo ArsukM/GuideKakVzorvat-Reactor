@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.historyTableDGV = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.waterBtn = new System.Windows.Forms.Button();
             this.coolingBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
@@ -47,25 +46,13 @@
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.paramTableDGV = new System.Windows.Forms.DataGridView();
             this.infoBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.updateTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.historyTableDGV)).BeginInit();
+            this.historyRichTB = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paramTableDGV)).BeginInit();
             this.SuspendLayout();
-            // 
-            // historyTableDGV
-            // 
-            this.historyTableDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.historyTableDGV.Location = new System.Drawing.Point(-1, 402);
-            this.historyTableDGV.Name = "historyTableDGV";
-            this.historyTableDGV.RowHeadersWidth = 51;
-            this.historyTableDGV.RowTemplate.Height = 24;
-            this.historyTableDGV.Size = new System.Drawing.Size(805, 211);
-            this.historyTableDGV.TabIndex = 0;
             // 
             // waterBtn
             // 
@@ -99,48 +86,49 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea10.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart1.Legends.Add(legend10);
             this.chart1.Location = new System.Drawing.Point(14, 12);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chart1.Series.Add(series10);
             this.chart1.Size = new System.Drawing.Size(332, 373);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea11.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart2.Legends.Add(legend11);
             this.chart2.Location = new System.Drawing.Point(347, 12);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Series1";
+            this.chart2.Series.Add(series11);
             this.chart2.Size = new System.Drawing.Size(341, 373);
             this.chart2.TabIndex = 5;
             this.chart2.Text = "chart2";
             // 
             // chart3
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
+            chartArea12.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart3.Legends.Add(legend12);
             this.chart3.Location = new System.Drawing.Point(694, 12);
             this.chart3.Name = "chart3";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart3.Series.Add(series3);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chart3.Series.Add(series12);
             this.chart3.Size = new System.Drawing.Size(339, 373);
             this.chart3.TabIndex = 6;
             this.chart3.Text = "chart3";
@@ -170,30 +158,20 @@
             this.infoBtn.UseVisualStyleBackColor = true;
             this.infoBtn.Click += new System.EventHandler(this.infoBtn_Click);
             // 
-            // textBox1
+            // historyRichTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(1046, 245);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 22);
-            this.textBox1.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1046, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 52);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "CONNCETION";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.historyRichTB.Location = new System.Drawing.Point(14, 401);
+            this.historyRichTB.Name = "historyRichTB";
+            this.historyRichTB.Size = new System.Drawing.Size(809, 212);
+            this.historyRichTB.TabIndex = 11;
+            this.historyRichTB.Text = "";
             // 
             // controlPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 625);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.historyRichTB);
             this.Controls.Add(this.infoBtn);
             this.Controls.Add(this.paramTableDGV);
             this.Controls.Add(this.chart3);
@@ -202,23 +180,18 @@
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.coolingBtn);
             this.Controls.Add(this.waterBtn);
-            this.Controls.Add(this.historyTableDGV);
             this.Name = "controlPanelForm";
             this.Text = "Панель управления";
             this.Load += new System.EventHandler(this.controlPanelForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.historyTableDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paramTableDGV)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView historyTableDGV;
         private System.Windows.Forms.Button waterBtn;
         private System.Windows.Forms.Button coolingBtn;
         private System.Windows.Forms.Button exitBtn;
@@ -227,9 +200,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.DataGridView paramTableDGV;
         private System.Windows.Forms.Button infoBtn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer updateTimer;
+        private System.Windows.Forms.RichTextBox historyRichTB;
     }
 }
 

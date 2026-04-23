@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,15 @@ namespace WindowsFormsApp1
             InitializeComponent();
             InitializeDataAndChart();
             SetupTimer();
+
+            chart1.Series["Температура"].Points.Clear();
+            chart1.Series["Норма"].Points.Clear();
+
+            chart2.Series["Уровень воды"].Points.Clear();
+            chart2.Series["Норма"].Points.Clear();
+
+            chart3.Series["Радиация"].Points.Clear();
+            chart3.Series["Норма"].Points.Clear();
         }
 
         private async void controlPanelForm_Load(object sender, EventArgs e)
@@ -98,7 +108,9 @@ namespace WindowsFormsApp1
             StreamReader sr = new StreamReader(res.GetResponseStream());
             string neww = res.StatusCode.ToString();
             string response = sr.ReadToEnd();
+            historyRichTB.Text = response;
             reactorResponse reactor = JsonConvert.DeserializeObject<reactorResponse>(response);
+            string currentTime = DateTime.Now.ToString("HH:mm:ss");
             double temperature = reactor.data.reactor_state.temperature;
             double water_level = reactor.data.reactor_state.water_level;
             double radiation = reactor.data.reactor_state.radiation;
@@ -107,17 +119,75 @@ namespace WindowsFormsApp1
             table.Columns.Add("Параметр", typeof(string));
             table.Columns.Add("Значение", typeof(string));
 
+            table.Rows.Add("Время", currentTime);
             table.Rows.Add("Температура", Math.Round(temperature, 2));
             table.Rows.Add("Уровень воды", Math.Round(water_level, 2));
             table.Rows.Add("Радиация", Math.Round(radiation, 2));
 
             paramTableDGV.DataSource = table;
+            UpdateCharts(currentTime, temperature, water_level, radiation);
+
+            if (temperature >= 1200)
+            {
+                paramTableDGV.Rows[1].DefaultCellStyle.BackColor = Color.Red;
+                if (temperature >= 1280)
+                {
+                    try
+                    {
+                        string url1 = $"https://mephi.opentoshi.net/api/v1/reactor/emergency-shutdown?team_id=e27df733";
+                        HttpWebRequest req1 = (HttpWebRequest)WebRequest.Create(url1);
+                        req1.Method = "POST";
+
+                        using (HttpWebResponse response1 = (HttpWebResponse)req1.GetResponse())
+                        using (StreamReader sr1 = new StreamReader(response1.GetResponseStream()))
+                        {
+                            string res1 = sr1.ReadToEnd();
+                            Console.WriteLine(res1);
+                        };
+                            MessageBox.Show("Произошла аварийная остановка реактора");
+                    }
+                    catch
+                    {
+
+                    } ;
+                }
+            }
+            else
+                paramTableDGV.Rows[1].DefaultCellStyle.BackColor = DefaultBackColor;
+
+            if (water_level == 0)
+                paramTableDGV.Rows[2].DefaultCellStyle.BackColor = Color.Red;
+            else
+                paramTableDGV.Rows[2].DefaultCellStyle.BackColor = DefaultBackColor;
+
+            if (radiation >= 150)
+                paramTableDGV.Rows[3].DefaultCellStyle.BackColor = Color.Red;
+            else
+                paramTableDGV.Rows[3].DefaultCellStyle.BackColor = DefaultBackColor;
+
+
+
+        }
+        private void UpdateCharts(string time, double temp, double water, double rad)
+        {
+            chart1.Series["Температура"].Points.AddY(temp);
+            chart2.Series["Уровень воды"].Points.AddY(water);
+            chart3.Series["Радиация"].Points.AddY(rad);
+
+            if (chart1.Series["Температура"].Points.Count > 50)
+            {
+                chart1.Series["Температура"].Points.RemoveAt(0);
+                chart2.Series["Уровень воды"].Points.RemoveAt(0);
+                chart3.Series["Радиация"].Points.RemoveAt(0);
+            }
         }
         private void SetupTimer()
         {
             updateTimer.Interval = 1000;
             updateTimer.Tick += UpdateTimer_Tick;
             updateTimer.Start();
+            DGVLoad();
+
         }
         private void UpdateTimer_Tick(object sender, EventArgs e)
         {
@@ -128,13 +198,20 @@ namespace WindowsFormsApp1
             dataTable = new DataTable();
 
             dataTable.Columns.Add("Time", typeof(string));
-            dataTable.Columns.Add("Temperature", typeof(double));
-            dataTable.Columns.Add("WaterLevel", typeof(double));
-            dataTable.Columns.Add("Radiation", typeof(int));
+            dataTable.Columns.Add("Температура", typeof(double));
+            dataTable.Columns.Add("Уровень воды", typeof(double));
+            dataTable.Columns.Add("Радиация", typeof(int));
 
             paramTableDGV.DataSource = dataTable;
             paramTableDGV.AllowUserToAddRows = false;
             paramTableDGV.ReadOnly = true;
+
+            chart1.ChartAreas[0].AxisY.Maximum = 1350;
+            chart2.ChartAreas[0].AxisY.Maximum = 100;
+            chart3.ChartAreas[0].AxisY.Maximum = 250;
+
+
+            //ТЕМПЕРАТУРА
 
             chart1.Series.Clear();
             chart1.ChartAreas[0].AxisX.Title = "Время";
@@ -145,39 +222,76 @@ namespace WindowsFormsApp1
             seriesTemp.Color = Color.Red;
             seriesTemp.BorderWidth = 2;
             seriesTemp.XValueMember = "Time";
-            seriesTemp.YValueMembers = "Temperature";
+            seriesTemp.YValueMembers = "Температура";
 
-            var seriesWater = chart1.Series.Add("Уровень воды");
+            //ВОДА
+
+            chart2.Series.Clear();
+            chart2.ChartAreas[0].AxisX.Title = "Время";
+            chart2.ChartAreas[0].AxisY.Title = "Значения";
+
+            var seriesWater = chart2.Series.Add("Уровень воды");
             seriesWater.ChartType = SeriesChartType.Line;
             seriesWater.Color = Color.Blue;
             seriesWater.BorderWidth = 2;
             seriesWater.XValueMember = "Time";
-            seriesWater.YValueMembers = "WaterLevel";
+            seriesWater.YValueMembers = "Уровень воды";
 
-            var seriesRad = chart1.Series.Add("Радиация");
+            //РАДИАЦИЯ
+
+            chart3.Series.Clear();
+            chart3.ChartAreas[0].AxisX.Title = "Время";
+            chart3.ChartAreas[0].AxisY.Title = "Значения";
+
+            var seriesRad = chart3.Series.Add("Радиация");
             seriesRad.ChartType = SeriesChartType.Line;
             seriesRad.Color = Color.Green;
             seriesRad.BorderWidth = 2;
             seriesRad.XValueMember = "Time";
-            seriesRad.YValueMembers = "Radiation";
+            seriesRad.YValueMembers = "Радиация";
 
-            var seriesNorm = chart1.Series.Add("НОРМА!");
-            seriesNorm.ChartType = SeriesChartType.Line;
-            seriesNorm.Color = Color.DarkRed;
-            seriesNorm.BorderWidth = 2;
-            seriesNorm.XValueMember = "Time";
-            seriesNorm.YValueMembers = "Norm";
+            //НОРМА ДЛЯ ВСЕХ-ВСЕХ
 
-            var legend = chart1.Legends.Add("MainLegend");
-            legend.Docking = Docking.Right;
-            legend.Font = new Font("Segoe UI", 9);
+            var seriesNormC = chart1.Series.Add("Норма");
+            seriesNormC.ChartType = SeriesChartType.Line;
+            seriesNormC.Color = Color.DarkRed;
+            seriesNormC.BorderWidth = 2;
+            seriesNormC.XValueMember = "Time";
+            seriesNormC.YValueMembers = "NormTemp";
+
+            var seriesNormWhater = chart2.Series.Add("Норма");
+            seriesNormWhater.ChartType = SeriesChartType.Line;
+            seriesNormWhater.Color = Color.DarkRed;
+            seriesNormWhater.BorderWidth = 2;
+            seriesNormWhater.XValueMember = "Time";
+            seriesNormWhater.YValueMembers = "NormWater";
+
+            var seriesNormRad = chart3.Series.Add("Норма");
+            seriesNormRad.ChartType = SeriesChartType.Line;
+            seriesNormRad.Color = Color.DarkRed;
+            seriesNormRad.BorderWidth = 2;
+            seriesNormRad.XValueMember = "Time";
+            seriesNormRad.YValueMembers = "NormRad";
+
+            //легенда
+
+            var legendC = chart1.Legends.Add("MainLegend");
+            legendC.Docking = Docking.Right;
+            legendC.Font = new Font("Segoe UI", 9);
+
+            var legendWhater = chart2.Legends.Add("MainLegend");
+            legendWhater.Docking = Docking.Right;
+            legendWhater.Font = new Font("Segoe UI", 9);
+
+            var legendRad = chart3.Legends.Add("MainLegend");
+            legendRad.Docking = Docking.Right;
+            legendRad.Font = new Font("Segoe UI", 9);
         }
 
         private void LoadDataFromJson()
         {
             try
             {
-                string currentTime = DateTime.Now.ToString("HH:mm:ss");
                 DGVLoad();
                 UpdateChartFromGrid();
             }
@@ -189,25 +303,28 @@ namespace WindowsFormsApp1
         }
         private void UpdateChartFromGrid()
         {
-            chart1.Series["Температура"].Points.Clear();
-            chart1.Series["Уровень воды"].Points.Clear();
-            chart1.Series["Радиация"].Points.Clear();
-            chart1.Series["НОРМА!"].Points.Clear();
-
             foreach (DataRow row in dataTable.Rows)
             {
                 string time = row["Time"].ToString();
-                double temp = Convert.ToDouble(row["Temperature"]);
-                double water = Convert.ToDouble(row["WaterLevel"]);
-                int radiation = Convert.ToInt32(row["Radiation"]);
-                int Norm = 290;
+                double temp = Convert.ToDouble(row["Температура"]);
+                double water = Convert.ToDouble(row["Уровень воды"]);
+                double rad = Convert.ToDouble(row["Радиация"]);
+                int NormTemp = 1180; // <=
+                int NormWater = 40; // >=
+                int NormRad = 290; // <=
 
                 chart1.Series["Температура"].Points.AddXY(time, temp);
-                chart1.Series["Уровень воды"].Points.AddXY(time, water);
-                chart1.Series["Радиация"].Points.AddXY(time, radiation);
-                chart1.Series["НОРМА!"].Points.AddXY(time, Norm);
+                chart1.Series["Норма"].Points.AddXY(time, NormTemp);
+
+                chart2.Series["Уровень воды"].Points.AddXY(time, water);
+                chart2.Series["Норма"].Points.AddXY(time, NormWater);
+
+                chart3.Series["Радиация"].Points.AddXY(time, rad);
+                chart3.Series["Норма"].Points.AddXY(time, NormRad);
             }
             chart1.ChartAreas[0].RecalculateAxesScale();
+            chart2.ChartAreas[0].RecalculateAxesScale();
+            chart3.ChartAreas[0].RecalculateAxesScale();
         }
     }
 

@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.Forms
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,11 +36,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 177);
+            this.label1.Location = new System.Drawing.Point(32, 175);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 48);
+            this.label1.Size = new System.Drawing.Size(248, 48);
             this.label1.TabIndex = 5;
-            this.label1.Text = "На сколько % залить воды?\r\nМинимум: 1%\r\nМаксимум: 30%";
+            this.label1.Text = "На сколько сильно хочешь охладить?\r\nМинимум: 1\r\nМаксимум: 30\r\n";
             // 
             // textBox1
             // 

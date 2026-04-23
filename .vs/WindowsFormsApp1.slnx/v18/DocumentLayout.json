@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\coolingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\coolingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\coolingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\coolingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\refillwaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\refillwaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\refillwaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\refillwaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\classes\\reactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\classes\\reactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\classes\\reactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\classes\\reactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|c:\\users\\user\\source\\repos\\windowsformsapp1\\windowsformsapp1\\forms\\controlpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\forms\\controlpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\forms\\controlpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|c:\\users\\user\\source\\repos\\windowsformsapp1\\windowsformsapp1\\forms\\infoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|solutionrelative:windowsformsapp1\\forms\\infoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72CE9220-06EE-4E6C-A25E-1DD159514D19}|WindowsFormsApp1\\\u041F\u0430\u043D\u0435\u043B\u044C \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0440\u0435\u0430\u043A\u0442\u043E\u0440\u043E\u043C.csproj|C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\windowsformsapp1\\forms\\controlpanelform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -42,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "controlPanelForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Forms\\controlPanelForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Forms\\controlPanelForm.cs",
@@ -59,103 +39,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "controlPanelForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Forms\\controlPanelForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Forms\\controlPanelForm.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Forms\\controlPanelForm.cs",
               "RelativeToolTip": "WindowsFormsApp1\\Forms\\controlPanelForm.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAIwCQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAxwCYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-22T12:00:48.965Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Reactor.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Classes\\Reactor.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Classes\\Reactor.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Classes\\Reactor.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Classes\\Reactor.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAwwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T11:53:38.659Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReactorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Classes\\ReactorRepository.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Classes\\ReactorRepository.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Classes\\ReactorRepository.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Classes\\ReactorRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAjwB0AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T11:53:37.177Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RefillWaterForm.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\RefillWaterForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\RefillWaterForm.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\RefillWaterForm.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\RefillWaterForm.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T11:14:37.898Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RefillWaterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\RefillWaterForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\RefillWaterForm.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\RefillWaterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "WindowsFormsApp1\\RefillWaterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T11:11:50.816Z",
-              "IsPinned": true,
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CoolingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\CoolingForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\CoolingForm.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\CoolingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "WindowsFormsApp1\\CoolingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "infoForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Forms\\infoForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Forms\\infoForm.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\Forms\\infoForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Forms\\infoForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T11:21:00.504Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-04-23T13:48:46.938Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CoolingForm.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\CoolingForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\CoolingForm.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\WindowsFormsApp1\\WindowsFormsApp1\\CoolingForm.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\CoolingForm.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAowBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T11:21:45.763Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }

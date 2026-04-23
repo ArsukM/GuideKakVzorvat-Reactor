@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         {
             //public static async Task<HttpResponseMessage> JsonAsync(HttpClient httpClient)
             //{
-                
+
 
 
 
@@ -49,8 +49,6 @@ namespace WindowsFormsApp1
             public static async Task GetReactorAsync(HttpClient httpClient, Reactor popa)
             {
                 string url = "https://mephi.opentoshi.net/api/v1/reactor/data?team_id=e27df733";
-
-
             }
         }
     }
