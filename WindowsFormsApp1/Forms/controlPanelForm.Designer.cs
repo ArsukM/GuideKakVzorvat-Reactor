@@ -37,31 +37,31 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.historyTableDGV = new System.Windows.Forms.DataGridView();
             this.waterBtn = new System.Windows.Forms.Button();
             this.coolingBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.paramTableDGV = new System.Windows.Forms.DataGridView();
             this.infoBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historyTableDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paramTableDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // historyTableDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 402);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(842, 211);
-            this.dataGridView1.TabIndex = 0;
+            this.historyTableDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.historyTableDGV.Location = new System.Drawing.Point(-1, 402);
+            this.historyTableDGV.Name = "historyTableDGV";
+            this.historyTableDGV.RowHeadersWidth = 51;
+            this.historyTableDGV.RowTemplate.Height = 24;
+            this.historyTableDGV.Size = new System.Drawing.Size(805, 211);
+            this.historyTableDGV.TabIndex = 0;
             // 
             // waterBtn
             // 
@@ -71,6 +71,7 @@
             this.waterBtn.TabIndex = 1;
             this.waterBtn.Text = "ДОЛИВ";
             this.waterBtn.UseVisualStyleBackColor = true;
+            this.waterBtn.Click += new System.EventHandler(this.waterBtn_Click);
             // 
             // coolingBtn
             // 
@@ -139,16 +140,20 @@
             this.chart3.TabIndex = 6;
             this.chart3.Text = "chart3";
             // 
-            // dataGridView2
+            // paramTableDGV
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(885, 402);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(281, 211);
-            this.dataGridView2.TabIndex = 7;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.paramTableDGV.AllowUserToAddRows = false;
+            this.paramTableDGV.AllowUserToDeleteRows = false;
+            this.paramTableDGV.AllowUserToOrderColumns = true;
+            this.paramTableDGV.AllowUserToResizeColumns = false;
+            this.paramTableDGV.AllowUserToResizeRows = false;
+            this.paramTableDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.paramTableDGV.Location = new System.Drawing.Point(829, 459);
+            this.paramTableDGV.Name = "paramTableDGV";
+            this.paramTableDGV.RowHeadersWidth = 51;
+            this.paramTableDGV.RowTemplate.Height = 24;
+            this.paramTableDGV.Size = new System.Drawing.Size(337, 154);
+            this.paramTableDGV.TabIndex = 7;
             // 
             // infoBtn
             // 
@@ -166,35 +171,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1178, 625);
             this.Controls.Add(this.infoBtn);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.paramTableDGV);
             this.Controls.Add(this.chart3);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.coolingBtn);
             this.Controls.Add(this.waterBtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.historyTableDGV);
             this.Name = "controlPanelForm";
             this.Text = "Панель управления";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.controlPanelForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.historyTableDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paramTableDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView historyTableDGV;
         private System.Windows.Forms.Button waterBtn;
         private System.Windows.Forms.Button coolingBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView paramTableDGV;
         private System.Windows.Forms.Button infoBtn;
     }
 }

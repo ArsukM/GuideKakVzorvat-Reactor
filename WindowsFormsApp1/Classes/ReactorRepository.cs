@@ -1,34 +1,55 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text;
+//using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
-using Newtonsoft.Json;
-using System.Data;
 
 
 namespace WindowsFormsApp1
 {
-    internal class ReactorRepository
-    {
-        public static async Task GetAsync(HttpClient httpClient)
-        {
-            string httpApiLink = "https://mephi.opentoshi.net/api/v1/reactor/data?team_id=e27df733";
-            using (HttpResponseMessage response = await httpClient.GetAsync(httpApiLink))
-            {
-                response.EnsureSuccessStatusCode();
+    using System;
+    using System.Data;
+    using System.Net.Http;
+    using System.Numerics;
+    using System.Security.Policy;
+    using System.Text.Json;
+    using System.Threading.Tasks;
 
-                var jsonResponse = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"{jsonResponse}\n");
-            };
+    namespace WindowsFormsApp1
+    {
+        internal class ReactorRepository
+        {
+            public static async Task<HttpResponseMessage> JsonAsync(HttpClient httpClient)
+            {
+                string url = "https://mephi.opentoshi.net/api/v1/reactor/data?team_id=e27df733";
+                return await httpClient.GetAsync(url);
+            }
+
+            public static async Task GetReactorAsync(HttpClient httpClient, Reactor popa)
+            {
+                string url = "https://mephi.opentoshi.net/api/v1/reactor/data?team_id=e27df733";
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                var reactorResponse = JsonSerializer.Deserialize<ReactorResponse>(url, options);
+                popa = reactorResponse?.data;
+
+                DataTable table = new DataTable();
+                table.Columns.Add("Параметр", typeof(string));
+                table.Columns.Add("Значение", typeof(string));
+
+                table.Rows.Add("Температура", popa.temperature.ToString("F1"));
+                table.Rows.Add("Уровень воды", popa.water_level.ToString("F1"));
+                table.Rows.Add("Радиация", popa.radiation.ToString());
+            }
         }
-        //public DataTable JsonToDGV(HttpResponseMessage jsonResponse)
-        //{
-        //    var abc = new JsonSerializer();
-        //    var abc2 = jsonResponse.js
-        //}
     }
 }

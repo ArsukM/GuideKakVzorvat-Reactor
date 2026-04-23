@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
@@ -11,19 +12,19 @@ namespace WindowsFormsApp1
         private float _temperature;
         private float _waterLevel;
         private int _radiation;
-
-        public float temperature { get { return _temperature; } set { _temperature = value; } }
-        public float water_level { get { return _waterLevel; } set { _waterLevel = value; } }
-        public int radiaton { get { return _radiation; } set { _radiation = value; } }
-
-
-        Reactor(float temp, float water, int rad)
+        internal Reactor(float temp, float water, int rad)
         {
             _temperature = temp;
             _waterLevel = water;
             _radiation = rad;
         }
-
-
+        public float temperature { get; set; }
+        public float water_level { get; set; }
+        public int radiation { get; set; }
     }
+    internal class ReactorResponse
+    {
+        public Reactor data { get; set; }
+    }
+    
 }
