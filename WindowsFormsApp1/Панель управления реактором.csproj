@@ -84,6 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoolingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoolingForm.Designer.cs">
+      <DependentUpon>CoolingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\controlPanelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Reactor.cs" />
     <Compile Include="Classes\ReactorRepository.cs" />
+    <Compile Include="RefillWaterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefillWaterForm.Designer.cs">
+      <DependentUpon>RefillWaterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CoolingForm.resx">
+      <DependentUpon>CoolingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\controlPanelForm.resx">
       <DependentUpon>controlPanelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +130,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RefillWaterForm.resx">
+      <DependentUpon>RefillWaterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
